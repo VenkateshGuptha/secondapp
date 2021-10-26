@@ -1,6 +1,7 @@
 import streamlit as st
 from pymongo import MongoClient
 from PIL import Image
+from streamlit_player import st_player
 
 degree_symbol = (u'\N{DEGREE SIGN}')
 data = "Data"
@@ -12,6 +13,8 @@ puzzle1_image = Image.open('icon.png')
 col1.image(puzzle1_image, use_column_width=True)
 if col1.button("Calculate"):
     col1.write("Calculating.......")
+    
+st_player("https://youtu.be/CmSKVW1v0xM")
 
 iterations = col3.slider("Heading", 0, 360, 0, 1)
 col3.text(str(iterations) + degree_symbol)
@@ -29,3 +32,4 @@ data, list(my_collections.find({"name": "Ribeira Charming Duplex"}))
 
 '''for item in my_collections.find():
     col1.write(item['name'])'''
+    

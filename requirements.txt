@@ -3,3 +3,4 @@ pandas
 pymongo
 pymongo[srv]
 streamlit
+streamlit-player
